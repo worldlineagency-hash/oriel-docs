@@ -5,43 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product pages · Oriel theme documentation</title>
     <meta name="description" content="Documentation for Oriel, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <script>
+      // Apply the saved light or dark choice before the page paints.
+      try {
+        const theme = localStorage.getItem('oriel-docs-theme');
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (error) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/oriel/styles.css">
+    <script src="/oriel/app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="/oriel/">Oriel <span>Documentation</span></a>
-      <a class="header-link" href="/oriel/support/">Contact support</a>
+      <div class="site-header__inner">
+        <button class="icon-button menu-button" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+        <a class="brand" href="/oriel/">Oriel <span>Docs</span></a>
+        <button class="search-button" type="button" aria-haspopup="dialog" aria-controls="docs-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+          <span class="search-button__label">Search</span>
+          <kbd class="search-button__key">⌘K</kbd>
+        </button>
+        <div class="site-header__end">
+          <span class="version">Version 1.0.0</span>
+          <a class="header-link" href="/oriel/support/">Support</a>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode">
+            <svg class="theme-toggle__moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/></svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
     </header>
+
     <div class="layout">
-      <nav class="sidebar" aria-label="Documentation">
-        <details class="sidebar__toggle" open>
-          <summary>Contents</summary>
-          <ul>
-            <li><a href="/oriel/">Getting started</a></li>
-<li><a href="/oriel/theme-settings/">Theme settings</a></li>
-<li><a href="/oriel/header-and-footer/">Header and footer</a></li>
-<li><a href="/oriel/sections/">Sections</a></li>
-<li><a href="/oriel/product-pages/" aria-current="page">Product pages</a></li>
-<li><a href="/oriel/collections-and-search/">Collections and search</a></li>
-<li><a href="/oriel/cart/">Quick add and cart</a></li>
-<li><a href="/oriel/blog-and-pages/">Blog and pages</a></li>
-<li><a href="/oriel/languages-and-markets/">Languages and markets</a></li>
-<li><a href="/oriel/accessibility-and-performance/">Accessibility and performance</a></li>
-<li><a href="/oriel/faq/">FAQ</a></li>
-<li><a href="/oriel/support/">Support</a></li>
-          </ul>
-        </details>
+      <nav class="sidebar" id="sidebar" aria-label="Documentation">
+        <button class="icon-button sidebar__close" type="button" aria-label="Close the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+        <ul class="nav">
+          <li class="nav-group"><p class="nav-group__title">Getting started</p><ul class="nav-group__list"><li><a href="/oriel/">Introduction</a></li><li><a href="/oriel/theme-settings/">Theme settings</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Store design</p><ul class="nav-group__list"><li><a href="/oriel/header-and-footer/">Header and footer</a></li><li><a href="/oriel/sections/">Sections</a></li><li><a href="/oriel/blog-and-pages/">Blog and pages</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Selling</p><ul class="nav-group__list"><li><a href="/oriel/product-pages/" aria-current="page">Product pages</a></li><li><a href="/oriel/collections-and-search/">Collections and search</a></li><li><a href="/oriel/cart/">Quick add and cart</a></li><li><a href="/oriel/languages-and-markets/">Languages and markets</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Reference</p><ul class="nav-group__list"><li><a href="/oriel/accessibility-and-performance/">Accessibility and performance</a></li><li><a href="/oriel/faq/">FAQ</a></li><li><a href="/oriel/support/">Support</a></li></ul></li>
+        </ul>
       </nav>
+      <div class="sidebar-backdrop" hidden></div>
+
       <main id="content" class="content" tabindex="-1">
         <!-- title: Product pages -->
 <h1>Product pages</h1>
 <p class="lead">The <strong>Product information</strong> section is made of blocks you can reorder, add or remove. Below it, <strong>Related products</strong> shows recommendations that Shopify creates automatically.</p>
 
-<h2>Blocks</h2>
+<h2 id="blocks">Blocks<a class="anchor" href="#blocks" aria-label="Link to Blocks">#</a></h2>
 <div class="table-wrap"><table>
   <thead><tr><th scope="col">Block</th><th scope="col">What it shows</th></tr></thead>
   <tbody>
@@ -61,10 +81,10 @@
   </tbody>
 </table></div>
 
-<h2>Purchase options and subscriptions</h2>
+<h2 id="purchase-options-and-subscriptions">Purchase options and subscriptions<a class="anchor" href="#purchase-options-and-subscriptions" aria-label="Link to Purchase options and subscriptions">#</a></h2>
 <p>Products with selling plans (subscriptions, pre-orders or try before you buy) show <strong>Purchase options</strong> inside the buy buttons: one-time purchase, unless the product can only be bought with a plan, and each plan the selected variant supports, with its price and saving. The product price follows the chosen option. This works with the Shopify Subscriptions app and other apps that create selling plans; no app block is needed. The cart shows the plan name on each line.</p>
 
-<h2>Media</h2>
+<h2 id="media">Media<a class="anchor" href="#media" aria-label="Link to Media">#</a></h2>
 <ul>
   <li><strong>Layout</strong>: Thumbnails shows one large image with thumbnails; Stacked shows images one under another.</li>
   <li><strong>Image ratio</strong>: Portrait, Square or Adapt to image.</li>
@@ -73,22 +93,29 @@
 </ul>
 <p>On phones, images become a row customers can swipe through, with a counter. Selecting a variant shows its image.</p>
 
-<h2>Other settings</h2>
+<h2 id="other-settings">Other settings<a class="anchor" href="#other-settings" aria-label="Link to Other settings">#</a></h2>
 <ul>
   <li><strong>Keep product information visible while scrolling</strong>: the details column stays in view next to long galleries on larger screens.</li>
   <li><strong>Show add to cart bar on mobile</strong>: a bar with the price and add to cart button appears on phones once the main button scrolls out of view.</li>
 </ul>
 
+        <nav class="pager" aria-label="More pages"><a class="pager__link" href="/oriel/blog-and-pages/" rel="prev"><span>Previous</span>Blog and pages</a><a class="pager__link pager__link--next" href="/oriel/collections-and-search/" rel="next"><span>Next</span>Collections and search</a></nav>
       </main>
+
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#blocks">Blocks</a></li><li class="toc__item toc__item--h2"><a href="#purchase-options-and-subscriptions">Purchase options and subscriptions</a></li><li class="toc__item toc__item--h2"><a href="#media">Media</a></li><li class="toc__item toc__item--h2"><a href="#other-settings">Other settings</a></li></ul></aside>
     </div>
-    <script>
-      // Phones: the contents start collapsed so the page content comes first.
-      if (window.matchMedia('(max-width: 860px)').matches) {
-        document.querySelector('.sidebar__toggle').open = false;
-      }
-    </script>
+
     <footer class="site-footer">
       <p>Oriel is a Shopify theme by Worldline Agency. Need help? <a href="/oriel/support/">Contact support</a>.</p>
     </footer>
+
+    <dialog class="search" id="docs-search" aria-label="Search the documentation">
+      <div class="search__field">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+        <input class="search__input" type="search" placeholder="Search the documentation" aria-label="Search the documentation" autocomplete="off" spellcheck="false">
+        <button class="search__close" type="button">Esc</button>
+      </div>
+      <div class="search__results" role="region" aria-live="polite" aria-label="Search results"></div>
+    </dialog>
   </body>
 </html>
