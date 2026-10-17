@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product pages · Oriel theme documentation</title>
+    <meta name="description" content="Documentation for Oriel, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/oriel/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/oriel/">Oriel <span>Documentation</span></a>
+      <a class="header-link" href="/oriel/support/">Contact support</a>
+    </header>
+    <div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <details class="sidebar__toggle" open>
+          <summary>Contents</summary>
+          <ul>
+            <li><a href="/oriel/">Getting started</a></li>
+<li><a href="/oriel/theme-settings/">Theme settings</a></li>
+<li><a href="/oriel/header-and-footer/">Header and footer</a></li>
+<li><a href="/oriel/sections/">Sections</a></li>
+<li><a href="/oriel/product-pages/" aria-current="page">Product pages</a></li>
+<li><a href="/oriel/collections-and-search/">Collections and search</a></li>
+<li><a href="/oriel/cart/">Quick add and cart</a></li>
+<li><a href="/oriel/blog-and-pages/">Blog and pages</a></li>
+<li><a href="/oriel/languages-and-markets/">Languages and markets</a></li>
+<li><a href="/oriel/accessibility-and-performance/">Accessibility and performance</a></li>
+<li><a href="/oriel/faq/">FAQ</a></li>
+<li><a href="/oriel/support/">Support</a></li>
+          </ul>
+        </details>
+      </nav>
+      <main id="content" class="content" tabindex="-1">
+        <!-- title: Product pages -->
+<h1>Product pages</h1>
+<p class="lead">The <strong>Product information</strong> section is made of blocks you can reorder, add or remove. Below it, <strong>Related products</strong> shows recommendations that Shopify creates automatically.</p>
+
+<h2>Blocks</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th scope="col">Block</th><th scope="col">What it shows</th></tr></thead>
+  <tbody>
+    <tr><td>Title</td><td>The product title. <strong>Show product type</strong> adds the type above it.</td></tr>
+    <tr><td>Vendor</td><td>The product's vendor.</td></tr>
+    <tr><td>Price</td><td>The price, with the compare-at price and percentage saved for products on sale, and the unit price where you've set one. <strong>Show tax and shipping note</strong> adds a line about taxes and shipping. <strong>Show Shop Pay Installments</strong> shows installment payments when they're available to your store.</td></tr>
+    <tr><td>Variant picker</td><td>Options as buttons or dropdowns (<strong>Style</strong>). Color options show the swatches you set for option values in Shopify admin. Options that are sold out or don't exist with the current selection are crossed out.</td></tr>
+    <tr><td>Inventory status</td><td>In stock, out of stock or low stock. <strong>Low stock threshold</strong> sets when "Low stock" shows.</td></tr>
+    <tr><td>Quantity selector</td><td>Minus and plus buttons around the quantity.</td></tr>
+    <tr><td>Buy buttons</td><td>The add to cart button. <strong>Show dynamic checkout buttons</strong> adds buttons such as Shop Pay and Apple Pay. <strong>Show recipient form for gift cards</strong> lets customers send a gift card to someone else on a chosen date.</td></tr>
+    <tr><td>Pickup availability</td><td>Locations where the product can be picked up, when local pickup is set up.</td></tr>
+    <tr><td>Description</td><td>The product description.</td></tr>
+    <tr><td>Collapsible tab</td><td>A row that opens to show text, or the content of a page, for example materials, sizing, care or shipping.</td></tr>
+    <tr><td>Complementary products</td><td>Products that go well together, set up in the Shopify Search &amp; Discovery app.</td></tr>
+    <tr><td>Share</td><td>Shares the product with the device's share menu, or copies the link.</td></tr>
+    <tr><td>Text, Custom Liquid and app blocks</td><td>Your own text, code or content from apps.</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Purchase options and subscriptions</h2>
+<p>Products with selling plans (subscriptions, pre-orders or try before you buy) show <strong>Purchase options</strong> inside the buy buttons: one-time purchase, unless the product can only be bought with a plan, and each plan the selected variant supports, with its price and saving. The product price follows the chosen option. This works with the Shopify Subscriptions app and other apps that create selling plans; no app block is needed. The cart shows the plan name on each line.</p>
+
+<h2>Media</h2>
+<ul>
+  <li><strong>Layout</strong>: Thumbnails shows one large image with thumbnails; Stacked shows images one under another.</li>
+  <li><strong>Image ratio</strong>: Portrait, Square or Adapt to image.</li>
+  <li><strong>Open images in a full-screen viewer</strong>: customers can click an image to view the gallery full screen.</li>
+  <li><strong>Autoplay videos</strong>: product videos play muted when they appear.</li>
+</ul>
+<p>On phones, images become a row customers can swipe through, with a counter. Selecting a variant shows its image.</p>
+
+<h2>Other settings</h2>
+<ul>
+  <li><strong>Keep product information visible while scrolling</strong>: the details column stays in view next to long galleries on larger screens.</li>
+  <li><strong>Show add to cart bar on mobile</strong>: a bar with the price and add to cart button appears on phones once the main button scrolls out of view.</li>
+</ul>
+
+      </main>
+    </div>
+    <script>
+      // Phones: the contents start collapsed so the page content comes first.
+      if (window.matchMedia('(max-width: 860px)').matches) {
+        document.querySelector('.sidebar__toggle').open = false;
+      }
+    </script>
+    <footer class="site-footer">
+      <p>Oriel is a Shopify theme by Worldline Agency. Need help? <a href="/oriel/support/">Contact support</a>.</p>
+    </footer>
+  </body>
+</html>

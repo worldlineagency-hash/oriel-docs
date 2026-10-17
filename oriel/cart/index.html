@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick add and cart · Oriel theme documentation</title>
+    <meta name="description" content="Documentation for Oriel, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/oriel/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/oriel/">Oriel <span>Documentation</span></a>
+      <a class="header-link" href="/oriel/support/">Contact support</a>
+    </header>
+    <div class="layout">
+      <nav class="sidebar" aria-label="Documentation">
+        <details class="sidebar__toggle" open>
+          <summary>Contents</summary>
+          <ul>
+            <li><a href="/oriel/">Getting started</a></li>
+<li><a href="/oriel/theme-settings/">Theme settings</a></li>
+<li><a href="/oriel/header-and-footer/">Header and footer</a></li>
+<li><a href="/oriel/sections/">Sections</a></li>
+<li><a href="/oriel/product-pages/">Product pages</a></li>
+<li><a href="/oriel/collections-and-search/">Collections and search</a></li>
+<li><a href="/oriel/cart/" aria-current="page">Quick add and cart</a></li>
+<li><a href="/oriel/blog-and-pages/">Blog and pages</a></li>
+<li><a href="/oriel/languages-and-markets/">Languages and markets</a></li>
+<li><a href="/oriel/accessibility-and-performance/">Accessibility and performance</a></li>
+<li><a href="/oriel/faq/">FAQ</a></li>
+<li><a href="/oriel/support/">Support</a></li>
+          </ul>
+        </details>
+      </nav>
+      <main id="content" class="content" tabindex="-1">
+        <!-- title: Quick add and cart -->
+<h1>Quick add and cart</h1>
+
+<h2>Quick add</h2>
+<p>Turn on <strong>Show add to cart button</strong> in a section with product cards, such as Featured collection or Product grid.</p>
+<ul>
+  <li>Products with a single variant show <strong>Add to bag</strong> and are added straight to the cart.</li>
+  <li>Products with options, or with purchase options, show <strong>Choose options</strong>. It opens a panel where customers pick a variant, quantity and purchase option without leaving the page. <strong>View full details</strong> opens the product page with the chosen variant.</li>
+</ul>
+<p>On touch screens the button is always shown; on other screens it appears when customers hover over or focus the card.</p>
+
+<h2>Cart type</h2>
+<p>Choose <strong>Cart type</strong> in <span class="path">Theme settings &gt; Cart</span>:</p>
+<ul>
+  <li><strong>Drawer</strong>: adding a product opens the cart in a panel at the side of the page.</li>
+  <li><strong>Page</strong>: customers stay where they are and see a short message with a link to the cart page.</li>
+</ul>
+
+<h2>In the cart</h2>
+<ul>
+  <li>Customers can change quantities and remove items. Removing an item offers <strong>Undo</strong>.</li>
+  <li>If a customer asks for more than you have in stock, the cart shows the quantity available and explains why.</li>
+  <li>Each line shows its options, subscription plan, discounts and unit price. Prices before a sale or subscription saving are crossed out.</li>
+  <li><strong>Show cart note</strong> adds an order note, in the cart drawer and on the cart page.</li>
+  <li>Automatic discounts are shown on each line and in the total. Customers enter discount codes at checkout.</li>
+  <li>On phones, the cart page shows a bar with the total and checkout button until the order summary scrolls into view.</li>
+</ul>
+
+      </main>
+    </div>
+    <script>
+      // Phones: the contents start collapsed so the page content comes first.
+      if (window.matchMedia('(max-width: 860px)').matches) {
+        document.querySelector('.sidebar__toggle').open = false;
+      }
+    </script>
+    <footer class="site-footer">
+      <p>Oriel is a Shopify theme by Worldline Agency. Need help? <a href="/oriel/support/">Contact support</a>.</p>
+    </footer>
+  </body>
+</html>
