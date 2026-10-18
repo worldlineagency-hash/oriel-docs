@@ -1,4 +1,4 @@
-// Oriel docs: light/dark switch, mobile contents drawer, "On this page"
+// Halden docs: light/dark switch, mobile contents drawer, "On this page"
 // highlighting and search over search.json.
 (() => {
   const root = document.documentElement;
@@ -12,7 +12,7 @@
   toggle.addEventListener('click', () => {
     root.dataset.theme = isDark() ? 'light' : 'dark';
     try {
-      localStorage.setItem('oriel-docs-theme', root.dataset.theme);
+      localStorage.setItem('halden-docs-theme', root.dataset.theme);
     } catch (error) {}
     labelToggle();
   });
