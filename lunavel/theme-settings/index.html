@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theme settings · Lunavel theme documentation</title>
+    <meta name="description" content="Documentation for Lunavel, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <script>
+      // Apply the saved light or dark choice before the page paints.
+      try {
+        const theme = localStorage.getItem('lunavel-docs-theme');
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/lunavel/styles.css?v=cff70e9f">
+    <script src="/lunavel/app.js?v=cff70e9f" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button class="icon-button menu-button" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+        <a class="brand" href="/lunavel/">Lunavel <span>Docs</span></a>
+        <button class="search-button" type="button" aria-haspopup="dialog" aria-controls="docs-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+          <span class="search-button__label">Search</span>
+          <kbd class="search-button__key">⌘K</kbd>
+        </button>
+        <div class="site-header__end">
+          <span class="version">Version 1.0.0</span>
+          <a class="header-link" href="/lunavel/support/">Support</a>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode">
+            <svg class="theme-toggle__moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/></svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar" id="sidebar" aria-label="Documentation">
+        <button class="icon-button sidebar__close" type="button" aria-label="Close the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+        <ul class="nav">
+          <li class="nav-group"><p class="nav-group__title">Getting started</p><ul class="nav-group__list"><li><a href="/lunavel/">Introduction</a></li><li><a href="/lunavel/theme-settings/" aria-current="page">Theme settings</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Store design</p><ul class="nav-group__list"><li><a href="/lunavel/header-and-footer/">Header and footer</a></li><li><a href="/lunavel/sections/">Sections</a></li><li><a href="/lunavel/blog-and-pages/">Blog and pages</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Selling</p><ul class="nav-group__list"><li><a href="/lunavel/product-pages/">Product pages</a></li><li><a href="/lunavel/collections-and-search/">Collections and search</a></li><li><a href="/lunavel/cart/">Quick add and cart</a></li><li><a href="/lunavel/languages-and-markets/">Languages and markets</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Reference</p><ul class="nav-group__list"><li><a href="/lunavel/accessibility-and-performance/">Accessibility and performance</a></li><li><a href="/lunavel/faq/">FAQ</a></li><li><a href="/lunavel/support/">Support</a></li></ul></li>
+        </ul>
+      </nav>
+      <div class="sidebar-backdrop" hidden></div>
+
+      <main id="content" class="content" tabindex="-1">
+        <!-- title: Theme settings -->
+<h1>Theme settings</h1>
+<p class="lead">Theme settings apply to your whole store. Open them from the paintbrush icon in the theme editor.</p>
+
+<h2 id="favicon">Favicon<a class="anchor" href="#favicon" aria-label="Link to Favicon">#</a></h2>
+<p><strong>Favicon image</strong> is the small icon in the browser tab. Use a square image; 32 × 32 px is recommended.</p>
+
+<h2 id="typography">Typography<a class="anchor" href="#typography" aria-label="Link to Typography">#</a></h2>
+<div class="table-wrap"><table>
+  <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Headings</td><td>Font for headings, the logo when you use your store name, and large wordmarks.</td></tr>
+    <tr><td>Body</td><td>Font for text, buttons and form fields.</td></tr>
+    <tr><td>Accent</td><td>Font for small labels, prices and subheadings.</td></tr>
+    <tr><td>Heading size</td><td>Scales all headings up or down.</td></tr>
+    <tr><td>Body text size</td><td>Scales body text up or down.</td></tr>
+    <tr><td>Use uppercase accent text</td><td>Shows labels and subheadings in capital letters.</td></tr>
+  </tbody>
+</table></div>
+<p>Fonts come from Shopify's font library, so they load quickly and don't need a license.</p>
+
+<h2 id="layout">Layout<a class="anchor" href="#layout" aria-label="Link to Layout">#</a></h2>
+<ul>
+  <li><strong>Page width</strong>: the maximum width of page content on large screens.</li>
+  <li><strong>Page margin</strong>: the space at the sides of the page. It scales down on smaller screens, so phones get a narrower margin.</li>
+  <li><strong>Show back to top button</strong>: a round button in the corner of long pages. It appears when the customer scrolls back up a long page and hides again after a moment, so it never sits over buttons in the corner for long.</li>
+</ul>
+
+<h2 id="colors">Colors<a class="anchor" href="#colors" aria-label="Link to Colors">#</a></h2>
+<p>Colors are set in <strong>color schemes</strong>. Each scheme has a background, surface (cards and form fields), text, muted text, border, button and button label color. Sections and some blocks let you choose a scheme, so you can create contrast between sections without editing colors one by one.</p>
+<p>Keep enough contrast between text and background colors: 4.5:1 for text is the accessibility standard.</p>
+
+<h2 id="shapes">Shapes<a class="anchor" href="#shapes" aria-label="Link to Shapes">#</a></h2>
+<div class="table-wrap"><table>
+  <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Button shape</td><td>Pill, Rounded or Square. Applies to buttons, quantity selectors, option buttons and filter buttons. Color swatches stay round.</td></tr>
+    <tr><td>Image corner radius</td><td>Rounds the corners of images and cards.</td></tr>
+    <tr><td>Input style</td><td>Underline or Outline for form fields.</td></tr>
+    <tr><td>Input corner radius</td><td>Rounds the corners of outlined form fields.</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="animations">Animations<a class="anchor" href="#animations" aria-label="Link to Animations">#</a></h2>
+<p><strong>Use animations</strong> turns hover and transition effects on or off. Animations are always off for visitors who ask their device to reduce motion.</p>
+
+<h2 id="cart">Cart<a class="anchor" href="#cart" aria-label="Link to Cart">#</a></h2>
+<p><strong>Cart type</strong> chooses what happens when a customer adds a product: <strong>Drawer</strong> opens the cart in a panel at the side, and <strong>Page</strong> keeps customers where they are and shows a short message with a link to the cart. See <a href="/lunavel/cart/">Quick add and cart</a>.</p>
+
+<h2 id="search">Search<a class="anchor" href="#search" aria-label="Link to Search">#</a></h2>
+<p><strong>Show search suggestions</strong> shows products, collections, pages and articles as customers type in the search window.</p>
+
+<h2 id="currency-format">Currency format<a class="anchor" href="#currency-format" aria-label="Link to Currency format">#</a></h2>
+<p><strong>Show currency codes</strong> adds the currency code to prices, for example $10.00 USD. It's recommended when you sell in more than one currency.</p>
+
+<h2 id="social-media">Social media<a class="anchor" href="#social-media" aria-label="Link to Social media">#</a></h2>
+<p>Add links to your Facebook, Instagram, TikTok, X (Twitter), Threads, YouTube, Pinterest, Snapchat, Tumblr, Vimeo and LinkedIn accounts. Icons appear in the footer when <strong>Show social media icons</strong> is on in the footer section.</p>
+
+        <nav class="pager" aria-label="More pages"><a class="pager__link" href="/lunavel/" rel="prev"><span>Previous</span>Introduction</a><a class="pager__link pager__link--next" href="/lunavel/header-and-footer/" rel="next"><span>Next</span>Header and footer</a></nav>
+      </main>
+
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#favicon">Favicon</a></li><li class="toc__item toc__item--h2"><a href="#typography">Typography</a></li><li class="toc__item toc__item--h2"><a href="#layout">Layout</a></li><li class="toc__item toc__item--h2"><a href="#colors">Colors</a></li><li class="toc__item toc__item--h2"><a href="#shapes">Shapes</a></li><li class="toc__item toc__item--h2"><a href="#animations">Animations</a></li><li class="toc__item toc__item--h2"><a href="#cart">Cart</a></li><li class="toc__item toc__item--h2"><a href="#search">Search</a></li><li class="toc__item toc__item--h2"><a href="#currency-format">Currency format</a></li><li class="toc__item toc__item--h2"><a href="#social-media">Social media</a></li></ul></aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>Lunavel is a Shopify theme by Worldline Agency. Need help? <a href="/lunavel/support/">Contact support</a>.</p>
+    </footer>
+
+    <dialog class="search" id="docs-search" aria-label="Search the documentation">
+      <div class="search__field">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+        <input class="search__input" type="search" placeholder="Search the documentation" aria-label="Search the documentation" autocomplete="off" spellcheck="false">
+        <button class="search__close" type="button">Esc</button>
+      </div>
+      <div class="search__results" role="region" aria-live="polite" aria-label="Search results"></div>
+    </dialog>
+  </body>
+</html>
