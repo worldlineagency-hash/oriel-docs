@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting started · Salvia theme documentation</title>
+    <meta name="description" content="Documentation for Salvia, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <script>
+      // Apply the saved light or dark choice before the page paints.
+      try {
+        const theme = localStorage.getItem('salvia-docs-theme');
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/salvia/styles.css?v=fe2c95fa">
+    <script src="/salvia/app.js?v=fe2c95fa" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button class="icon-button menu-button" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+        <a class="brand" href="/salvia/">Salvia <span>Docs</span></a>
+        <button class="search-button" type="button" aria-haspopup="dialog" aria-controls="docs-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+          <span class="search-button__label">Search</span>
+          <kbd class="search-button__key">⌘K</kbd>
+        </button>
+        <div class="site-header__end">
+          <span class="version">Version 1.0.0</span>
+          <a class="header-link" href="/salvia/support/">Support</a>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode">
+            <svg class="theme-toggle__moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/></svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar" id="sidebar" aria-label="Documentation">
+        <button class="icon-button sidebar__close" type="button" aria-label="Close the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+        <ul class="nav">
+          <li class="nav-group"><p class="nav-group__title">Getting started</p><ul class="nav-group__list"><li><a href="/salvia/" aria-current="page">Introduction</a></li><li><a href="/salvia/theme-settings/">Theme settings</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Store design</p><ul class="nav-group__list"><li><a href="/salvia/header-and-footer/">Header and footer</a></li><li><a href="/salvia/sections/">Sections</a></li><li><a href="/salvia/blog-and-pages/">Blog and pages</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Selling</p><ul class="nav-group__list"><li><a href="/salvia/product-pages/">Product pages</a></li><li><a href="/salvia/product-content/">Product content</a></li><li><a href="/salvia/collections-and-search/">Collections and search</a></li><li><a href="/salvia/cart/">Cart</a></li><li><a href="/salvia/languages-and-markets/">Languages and markets</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Reference</p><ul class="nav-group__list"><li><a href="/salvia/accessibility-and-performance/">Accessibility and performance</a></li><li><a href="/salvia/faq/">FAQ</a></li><li><a href="/salvia/support/">Support</a></li></ul></li>
+        </ul>
+      </nav>
+      <div class="sidebar-backdrop" hidden></div>
+
+      <main id="content" class="content" tabindex="-1">
+        <!-- title: Getting started -->
+<h1>Salvia documentation</h1>
+<p class="lead">Salvia is a Shopify theme for wellness, supplement and daily-care brands that sell a focused range of products. It is built around routines: what to take in the morning, what in the evening, and what belongs together. This guide explains how to set up the theme and what each setting and section does.</p>
+
+<div class="note">
+  <p>Before you edit code or install apps that change theme files, duplicate your theme in <span class="path">Online Store &gt; Themes &gt; … &gt; Duplicate</span> so you can always go back.</p>
+</div>
+
+<h2 id="set-up-your-store">Set up your store<a class="anchor" href="#set-up-your-store" aria-label="Link to Set up your store">#</a></h2>
+<ol>
+  <li>In Shopify admin, go to <span class="path">Online Store &gt; Themes</span> and add Salvia from the Shopify Theme Store.</li>
+  <li>Click <strong>Customize</strong> to open the theme editor.</li>
+  <li>Set up your menus in <span class="path">Content &gt; Menus</span>. The header uses your <strong>Main menu</strong> and the footer's Navigation blocks use the menus you choose. Menus can have three levels: nested links open in dropdowns or a mega menu on desktop and in the mobile menu.</li>
+  <li>Add your logo in the <strong>Header</strong> section, your favicon in <span class="path">Theme settings &gt; Favicon</span>, and links to your accounts in <span class="path">Theme settings &gt; Social media</span>.</li>
+  <li>Pick your colors in <span class="path">Theme settings &gt; Colors</span>. Salvia comes with color schemes for light, paper, sage and ink backgrounds; every section has a <strong>Color scheme</strong> setting.</li>
+  <li>Replace the placeholder images and text in each section of the home page.</li>
+</ol>
+
+<h2 id="what-makes-salvia-different">What makes Salvia different<a class="anchor" href="#what-makes-salvia-different" aria-label="Link to What makes Salvia different">#</a></h2>
+<ul>
+  <li><strong>Routine builder</strong>: a page where customers pick products for each moment of the day and add the whole routine to the cart at once. See <a href="/salvia/sections/">Sections</a>.</li>
+  <li><strong>Nutrition table and ingredient spotlight</strong>: show what's in each serving, with reference values and authorised claims. See <a href="/salvia/product-content/">Product content</a>.</li>
+  <li><strong>Supply and purchase options</strong>: how long a pack lasts and its price per day, plus subscription plans from your subscription app. See <a href="/salvia/product-pages/">Product pages</a>.</li>
+  <li><strong>Shop the look</strong>: a lifestyle image with numbered dots that customers can add to the cart together.</li>
+</ul>
+
+<h2 id="what-s-in-this-guide">What's in this guide<a class="anchor" href="#what-s-in-this-guide" aria-label="Link to What&#x27;s in this guide">#</a></h2>
+<ul>
+  <li><a href="/salvia/theme-settings/">Theme settings</a>: colors, fonts, layout, cart and navigation.</li>
+  <li><a href="/salvia/header-and-footer/">Header and footer</a>: logo, menus, mega menu, search, announcements and the footer.</li>
+  <li><a href="/salvia/sections/">Sections</a>: every section you can add to your pages.</li>
+  <li><a href="/salvia/product-pages/">Product pages</a>: blocks, media, variants, purchase options and supply.</li>
+  <li><a href="/salvia/product-content/">Product content</a>: nutrition tables, ingredients and FAQs for each product.</li>
+  <li><a href="/salvia/collections-and-search/">Collections and search</a>: filters, sorting, quick view and search.</li>
+  <li><a href="/salvia/cart/">Cart</a>: the cart drawer, cart page and free shipping progress.</li>
+  <li><a href="/salvia/blog-and-pages/">Blog and pages</a>: journal, pages, contact, 404, password and gift card pages.</li>
+  <li><a href="/salvia/languages-and-markets/">Languages and markets</a>: selling in several countries and languages.</li>
+  <li><a href="/salvia/accessibility-and-performance/">Accessibility and performance</a>, <a href="/salvia/faq/">FAQ</a> and <a href="/salvia/support/">Support</a>.</li>
+</ul>
+
+<h2 id="theme-version">Theme version<a class="anchor" href="#theme-version" aria-label="Link to Theme version">#</a></h2>
+<p>You can see your theme version in <span class="path">Online Store &gt; Themes</span>, under the theme name. Include it when you contact support.</p>
+        <nav class="pager" aria-label="More pages"><a class="pager__link pager__link--next" href="/salvia/theme-settings/" rel="next"><span>Next</span>Theme settings</a></nav>
+      </main>
+
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#set-up-your-store">Set up your store</a></li><li class="toc__item toc__item--h2"><a href="#what-makes-salvia-different">What makes Salvia different</a></li><li class="toc__item toc__item--h2"><a href="#what-s-in-this-guide">What's in this guide</a></li><li class="toc__item toc__item--h2"><a href="#theme-version">Theme version</a></li></ul></aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>Salvia is a Shopify theme by Worldline Agency. Need help? <a href="/salvia/support/">Contact support</a>.</p>
+    </footer>
+
+    <dialog class="search" id="docs-search" aria-label="Search the documentation">
+      <div class="search__field">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+        <input class="search__input" type="search" placeholder="Search the documentation" aria-label="Search the documentation" autocomplete="off" spellcheck="false">
+        <button class="search__close" type="button">Esc</button>
+      </div>
+      <div class="search__results" role="region" aria-live="polite" aria-label="Search results"></div>
+    </dialog>
+  </body>
+</html>

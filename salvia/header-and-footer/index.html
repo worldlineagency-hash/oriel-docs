@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Header and footer · Salvia theme documentation</title>
+    <meta name="description" content="Documentation for Salvia, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <script>
+      // Apply the saved light or dark choice before the page paints.
+      try {
+        const theme = localStorage.getItem('salvia-docs-theme');
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/salvia/styles.css?v=fe2c95fa">
+    <script src="/salvia/app.js?v=fe2c95fa" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button class="icon-button menu-button" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+        <a class="brand" href="/salvia/">Salvia <span>Docs</span></a>
+        <button class="search-button" type="button" aria-haspopup="dialog" aria-controls="docs-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+          <span class="search-button__label">Search</span>
+          <kbd class="search-button__key">⌘K</kbd>
+        </button>
+        <div class="site-header__end">
+          <span class="version">Version 1.0.0</span>
+          <a class="header-link" href="/salvia/support/">Support</a>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode">
+            <svg class="theme-toggle__moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/></svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar" id="sidebar" aria-label="Documentation">
+        <button class="icon-button sidebar__close" type="button" aria-label="Close the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+        <ul class="nav">
+          <li class="nav-group"><p class="nav-group__title">Getting started</p><ul class="nav-group__list"><li><a href="/salvia/">Introduction</a></li><li><a href="/salvia/theme-settings/">Theme settings</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Store design</p><ul class="nav-group__list"><li><a href="/salvia/header-and-footer/" aria-current="page">Header and footer</a></li><li><a href="/salvia/sections/">Sections</a></li><li><a href="/salvia/blog-and-pages/">Blog and pages</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Selling</p><ul class="nav-group__list"><li><a href="/salvia/product-pages/">Product pages</a></li><li><a href="/salvia/product-content/">Product content</a></li><li><a href="/salvia/collections-and-search/">Collections and search</a></li><li><a href="/salvia/cart/">Cart</a></li><li><a href="/salvia/languages-and-markets/">Languages and markets</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Reference</p><ul class="nav-group__list"><li><a href="/salvia/accessibility-and-performance/">Accessibility and performance</a></li><li><a href="/salvia/faq/">FAQ</a></li><li><a href="/salvia/support/">Support</a></li></ul></li>
+        </ul>
+      </nav>
+      <div class="sidebar-backdrop" hidden></div>
+
+      <main id="content" class="content" tabindex="-1">
+        <!-- title: Header and footer -->
+<h1>Header and footer</h1>
+<p class="lead">The header and footer appear on every page. Edit them in the theme editor under <strong>Header</strong> and <strong>Footer</strong> in the left sidebar.</p>
+
+<h2 id="announcement-bar">Announcement bar<a class="anchor" href="#announcement-bar" aria-label="Link to Announcement bar">#</a></h2>
+<p>Short messages above the header, each in its own <strong>Announcement</strong> block with optional link. <strong>Rotate announcements</strong> shows them one at a time (<strong>Change every</strong> sets the speed); visitors can pause it. Turn on the <strong>country/region selector</strong> and <strong>social media icons</strong> here too.</p>
+
+<h2 id="header">Header<a class="anchor" href="#header" aria-label="Link to Header">#</a></h2>
+<ul>
+  <li><strong>Logo image</strong> and <strong>Logo width</strong>. On phones the logo is a little smaller so the icons fit.</li>
+  <li><strong>Logo for dark backgrounds</strong>: used instead of the logo when the header's color scheme is dark.</li>
+  <li><strong>Sticky header</strong> keeps the header at the top while scrolling.</li>
+  <li><strong>Main menu</strong>: on desktop, links with children open a dropdown; links with grandchildren open a <strong>mega menu</strong>. In a mega menu, groups that link only to products show product images. <strong>Mega menu: group shown as pills</strong> picks one group (by position) to show as rounded buttons.</li>
+  <li><strong>Mega menu promo</strong> blocks add an image card to the mega menu of the link you choose.</li>
+  <li><strong>Highlighted link</strong>: type the exact title of a top-level link (for example <em>Build your routine</em>) to show it in the accent color.</li>
+  <li><strong>Account menu</strong>: links shown in the account dropdown.</li>
+</ul>
+<p>If there isn't room for the whole menu, it wraps onto a second line instead of running under the logo. Below 990 px the menu moves into a slide-in drawer.</p>
+
+<h2 id="search">Search<a class="anchor" href="#search" aria-label="Link to Search">#</a></h2>
+<p>The search icon opens predictive search. Before typing, it shows <strong>Popular searches</strong>, a few <strong>Collections</strong> and the first products of <strong>Products from collection</strong>. While typing, it suggests products, collections, articles and pages.</p>
+
+<h2 id="mobile-bottom-bar">Mobile bottom bar<a class="anchor" href="#mobile-bottom-bar" aria-label="Link to Mobile bottom bar">#</a></h2>
+<p>An optional bar fixed to the bottom of phone screens with shop, search, account and cart links. Add it from <strong>Add section</strong> in the footer group.</p>
+
+<h2 id="footer">Footer<a class="anchor" href="#footer" aria-label="Link to Footer">#</a></h2>
+<ul>
+  <li><strong>Newsletter</strong> block: an email signup. Subscribers are added to your customers with email marketing consent. <strong>Show Follow on Shop</strong> adds Shop's follow button when Shop Pay is on.</li>
+  <li><strong>Navigation</strong> blocks: a heading and a menu each. Hide one with the eye icon and the columns rearrange.</li>
+  <li><strong>Text</strong> block: free text, for example your address or opening hours.</li>
+  <li>Logo, <strong>Logo for dark backgrounds</strong>, tagline, social icons, country/region selector, payment icons and policy links.</li>
+</ul>
+
+<h2 id="icon-band-and-social-gallery">Icon band and social gallery<a class="anchor" href="#icon-band-and-social-gallery" aria-label="Link to Icon band and social gallery">#</a></h2>
+<p><strong>Icon band</strong> shows short promises such as free shipping or vegan formulas; <strong>Hide on</strong> hides it on the home page or product pages. <strong>Social gallery</strong> shows images that link to products or to your Instagram; <strong>Hide on home page</strong> avoids repeating home page photos.</p>
+
+<h2 id="newsletter-popup">Newsletter popup<a class="anchor" href="#newsletter-popup" aria-label="Link to Newsletter popup">#</a></h2>
+<p>A popup with an email signup that opens after <strong>Open after</strong> seconds. Closing it hides it for <strong>Hide after closing for</strong> days; subscribing hides it for good. Add a <strong>Discount code</strong> (create it in <span class="path">Discounts</span> first) to show it after signup. It never opens on the cart or password page, or on top of the cart drawer. In the theme editor it opens while the section is selected.</p>
+        <nav class="pager" aria-label="More pages"><a class="pager__link pager__link--prev" href="/salvia/theme-settings/" rel="prev"><span>Previous</span>Theme settings</a><a class="pager__link pager__link--next" href="/salvia/sections/" rel="next"><span>Next</span>Sections</a></nav>
+      </main>
+
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#announcement-bar">Announcement bar</a></li><li class="toc__item toc__item--h2"><a href="#header">Header</a></li><li class="toc__item toc__item--h2"><a href="#search">Search</a></li><li class="toc__item toc__item--h2"><a href="#mobile-bottom-bar">Mobile bottom bar</a></li><li class="toc__item toc__item--h2"><a href="#footer">Footer</a></li><li class="toc__item toc__item--h2"><a href="#icon-band-and-social-gallery">Icon band and social gallery</a></li><li class="toc__item toc__item--h2"><a href="#newsletter-popup">Newsletter popup</a></li></ul></aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>Salvia is a Shopify theme by Worldline Agency. Need help? <a href="/salvia/support/">Contact support</a>.</p>
+    </footer>
+
+    <dialog class="search" id="docs-search" aria-label="Search the documentation">
+      <div class="search__field">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+        <input class="search__input" type="search" placeholder="Search the documentation" aria-label="Search the documentation" autocomplete="off" spellcheck="false">
+        <button class="search__close" type="button">Esc</button>
+      </div>
+      <div class="search__results" role="region" aria-live="polite" aria-label="Search results"></div>
+    </dialog>
+  </body>
+</html>

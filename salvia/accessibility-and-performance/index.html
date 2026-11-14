@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibility and performance · Salvia theme documentation</title>
+    <meta name="description" content="Documentation for Salvia, a Shopify theme by Worldline Agency: setup, settings, sections and support.">
+    <script>
+      // Apply the saved light or dark choice before the page paints.
+      try {
+        const theme = localStorage.getItem('salvia-docs-theme');
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/salvia/styles.css?v=fe2c95fa">
+    <script src="/salvia/app.js?v=fe2c95fa" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button class="icon-button menu-button" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+        <a class="brand" href="/salvia/">Salvia <span>Docs</span></a>
+        <button class="search-button" type="button" aria-haspopup="dialog" aria-controls="docs-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+          <span class="search-button__label">Search</span>
+          <kbd class="search-button__key">⌘K</kbd>
+        </button>
+        <div class="site-header__end">
+          <span class="version">Version 1.0.0</span>
+          <a class="header-link" href="/salvia/support/">Support</a>
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode">
+            <svg class="theme-toggle__moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/></svg>
+            <svg class="theme-toggle__sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="sidebar" id="sidebar" aria-label="Documentation">
+        <button class="icon-button sidebar__close" type="button" aria-label="Close the contents">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+        <ul class="nav">
+          <li class="nav-group"><p class="nav-group__title">Getting started</p><ul class="nav-group__list"><li><a href="/salvia/">Introduction</a></li><li><a href="/salvia/theme-settings/">Theme settings</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Store design</p><ul class="nav-group__list"><li><a href="/salvia/header-and-footer/">Header and footer</a></li><li><a href="/salvia/sections/">Sections</a></li><li><a href="/salvia/blog-and-pages/">Blog and pages</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Selling</p><ul class="nav-group__list"><li><a href="/salvia/product-pages/">Product pages</a></li><li><a href="/salvia/product-content/">Product content</a></li><li><a href="/salvia/collections-and-search/">Collections and search</a></li><li><a href="/salvia/cart/">Cart</a></li><li><a href="/salvia/languages-and-markets/">Languages and markets</a></li></ul></li>
+<li class="nav-group"><p class="nav-group__title">Reference</p><ul class="nav-group__list"><li><a href="/salvia/accessibility-and-performance/" aria-current="page">Accessibility and performance</a></li><li><a href="/salvia/faq/">FAQ</a></li><li><a href="/salvia/support/">Support</a></li></ul></li>
+        </ul>
+      </nav>
+      <div class="sidebar-backdrop" hidden></div>
+
+      <main id="content" class="content" tabindex="-1">
+        <!-- title: Accessibility and performance -->
+<h1>Accessibility and performance</h1>
+
+<h2 id="accessibility">Accessibility<a class="anchor" href="#accessibility" aria-label="Link to Accessibility">#</a></h2>
+<ul>
+  <li>Everything works with a keyboard, with a visible focus outline and a skip link to the content.</li>
+  <li>Menus, the cart drawer, quick view and popups keep focus inside while open and return it when closed.</li>
+  <li>Changes such as adding to the cart are announced to screen readers.</li>
+  <li>Slideshows, announcements and videos can be paused, and don't move for visitors who prefer reduced motion.</li>
+  <li>Default color schemes meet WCAG AA contrast. Check contrast when you change colors.</li>
+  <li>Add alt text to your images in Shopify admin; decorative images are hidden from screen readers.</li>
+</ul>
+
+<h2 id="performance">Performance<a class="anchor" href="#performance" aria-label="Link to Performance">#</a></h2>
+<ul>
+  <li>No frameworks: small scripts that load only for the sections on the page.</li>
+  <li>Responsive images in the right size for each screen; images below the first screen load lazily.</li>
+  <li>Videos and maps load only when they're needed.</li>
+</ul>
+<p>Apps add their own code. If your store slows down, check which apps load on the page.</p>
+        <nav class="pager" aria-label="More pages"><a class="pager__link pager__link--prev" href="/salvia/languages-and-markets/" rel="prev"><span>Previous</span>Languages and markets</a><a class="pager__link pager__link--next" href="/salvia/faq/" rel="next"><span>Next</span>FAQ</a></nav>
+      </main>
+
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#accessibility">Accessibility</a></li><li class="toc__item toc__item--h2"><a href="#performance">Performance</a></li></ul></aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>Salvia is a Shopify theme by Worldline Agency. Need help? <a href="/salvia/support/">Contact support</a>.</p>
+    </footer>
+
+    <dialog class="search" id="docs-search" aria-label="Search the documentation">
+      <div class="search__field">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13 13 4 4"/></svg>
+        <input class="search__input" type="search" placeholder="Search the documentation" aria-label="Search the documentation" autocomplete="off" spellcheck="false">
+        <button class="search__close" type="button">Esc</button>
+      </div>
+      <div class="search__results" role="region" aria-live="polite" aria-label="Search results"></div>
+    </dialog>
+  </body>
+</html>
