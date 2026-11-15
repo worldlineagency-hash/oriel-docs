@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/salvia/styles.css?v=fe2c95fa">
-    <script src="/salvia/app.js?v=fe2c95fa" defer></script>
+    <link rel="stylesheet" href="/salvia/styles.css?v=9398ffab">
+    <script src="/salvia/app.js?v=9398ffab" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -68,7 +68,7 @@
 <div class="table-wrap"><table>
   <thead><tr><th scope="col">Section</th><th scope="col">Use it for</th></tr></thead>
   <tbody>
-    <tr><td>Slideshow</td><td>Up to five slides with an image (and optional mobile image) or video, eyebrow, heading, text and two buttons. Tabs under the slides show each slide's <strong>Tab label</strong>. <strong>Height on desktop</strong> is a minimum: the slideshow grows if the text needs more room. Turn on <strong>Use as the page's main heading</strong> on one slide when the page has no other H1.</td></tr>
+    <tr><td>Slideshow</td><td>Up to five slides with an image (and optional mobile image) or video, eyebrow, heading, text and two buttons. Tabs under the slides show each slide's <strong>Tab label</strong>. <strong>Height on desktop</strong> is a minimum: the slideshow grows if the text needs more room. Turn on <strong>Use as the page's main heading (H1)</strong> on one slide when the page has no other H1. <strong>Rotate slides automatically</strong> and <strong>Time per image slide</strong> control autoplay; a video slide moves on when its video ends. Autoplay pauses on hover and keyboard focus, and visitors can pause it. <strong>Text box position</strong> puts the card on the left or right, and <strong>Accessible name</strong> is read by screen readers.</td></tr>
     <tr><td>Collection list</td><td>Collection tiles with image and product count, in two to five columns.</td></tr>
     <tr><td>Featured products</td><td>Products in tabs, one <strong>Tab</strong> block per collection, as a carousel or grid.</td></tr>
     <tr><td>Routine teaser</td><td>Up to four "moments" (for example Morning, Evening) with an image, badge, text, product thumbnails and a link.</td></tr>
@@ -95,8 +95,13 @@
     <tr><td>Rate cards</td><td>Shipping rates or plans as cards with label, price and note.</td></tr>
     <tr><td>FAQ</td><td>Numbered questions and answers beside a heading.</td></tr>
     <tr><td>FAQ with topics</td><td>Questions grouped under <strong>Topic</strong> blocks, with a topic menu beside them when there are two or more topics.</td></tr>
-    <tr><td>Image comparison</td><td>A before/after slider with steps beside it, for example how a powder mixes.</td></tr>
+    <tr><td>Image comparison</td><td>A before/after slider with steps beside it, for example how a powder mixes. Set the <strong>Before label</strong> and <strong>After label</strong>, the slider's <strong>Starting position</strong> and the <strong>Image position on desktop</strong>.</td></tr>
     <tr><td>Ingredient index</td><td>An A–Z list of ingredients with the products they're used in.</td></tr>
+    <tr><td>Video</td><td>An uploaded video or a YouTube/Vimeo link with a cover image and play button. Nothing loads until the video is played. See <a href="#video">Video</a>.</td></tr>
+    <tr><td>Scrolling text</td><td>Short lines with icons moving sideways in a band. See <a href="#scrolling-text">Scrolling text</a>.</td></tr>
+    <tr><td>Logo list</td><td>Certifications, press or partner logos, or short text badges. See <a href="#logo-list">Logo list</a>.</td></tr>
+    <tr><td>Newsletter</td><td>An email signup band with optional image and small print. See <a href="#newsletter">Newsletter</a>.</td></tr>
+    <tr><td>Product comparison</td><td>Up to four products side by side. See <a href="/salvia/product-pages/#product-comparison">Product pages</a>.</td></tr>
     <tr><td>Store location</td><td>An image, address, opening hours and a directions button. Nothing loads from Google until the button is clicked.</td></tr>
     <tr><td>Custom Liquid</td><td>Code from apps or developers.</td></tr>
   </tbody>
@@ -105,15 +110,42 @@
 <h2 id="routine-sections">Routine sections<a class="anchor" href="#routine-sections" aria-label="Link to Routine sections">#</a></h2>
 <p>Salvia's routine page (template <code>page.routine</code>) uses three sections:</p>
 <ul>
-  <li><strong>Routine header</strong>: the page title, intro and up to three short steps.</li>
+  <li><strong>Routine header</strong>: the page title, intro and up to four short steps.</li>
   <li><strong>Routine builder</strong>: one <strong>Moment</strong> block per time of day, each with its products. Customers tick products, see the total and add the whole routine to the cart. Products that need a selling plan link to their product page instead.</li>
   <li><strong>Featured product</strong>: one product with price and buy buttons, built from blocks.</li>
 </ul>
 <p>To make a routine page: create a page in <span class="path">Online Store &gt; Pages</span>, choose the template <strong>page.routine</strong>, then add products to each moment in the theme editor.</p>
+
+<h2 id="video">Video<a class="anchor" href="#video" aria-label="Link to Video">#</a></h2>
+<ul>
+  <li>Upload a <strong>Video</strong>, or paste a link in <strong>Or a YouTube / Vimeo link</strong> (used when no video is uploaded).</li>
+  <li><strong>Cover image</strong> is shown until the video is played; without one, the video's own preview is used. The video and the YouTube or Vimeo player load only when the customer presses play.</li>
+  <li><strong>Video description</strong> is read by screen readers: describe what the video shows.</li>
+  <li><strong>Shape</strong>: the video's own shape, 16:9, 4:3, 1:1 or 9:16. The video stays within most of the screen height, so tall videos aren't cut off. <strong>Full page width</strong> shows it edge to edge, with no height limit.</li>
+  <li>Optional eyebrow, heading and text above the video.</li>
+</ul>
+
+<h2 id="scrolling-text">Scrolling text<a class="anchor" href="#scrolling-text" aria-label="Link to Scrolling text">#</a></h2>
+<ul>
+  <li>One <strong>Text</strong> block per line, each with an optional <strong>Icon</strong> and <strong>Link</strong>.</li>
+  <li><strong>Time for one loop</strong> sets the speed (higher is slower) and <strong>Moves toward</strong> the direction.</li>
+  <li>It pauses while the pointer is over it or a link in it has keyboard focus, and doesn't move at all for visitors who prefer reduced motion. <strong>Show pause button</strong> adds a button to stop it.</li>
+</ul>
+
+<h2 id="logo-list">Logo list<a class="anchor" href="#logo-list" aria-label="Link to Logo list">#</a></h2>
+<ul>
+  <li>One <strong>Logo</strong> block per item, with a <strong>Logo image</strong>, an <strong>Icon</strong> or just its <strong>Name</strong> as text. The name is also the image's alt text.</li>
+  <li><strong>Short quote or note</strong> under the logo, and an optional <strong>Link</strong>.</li>
+  <li>Logos are shown in gray and get their colors on hover. Upload logos with a transparent background.</li>
+</ul>
+<div class="note"><p>Only show certifications, awards and press you really have, and link to the source where you can.</p></div>
+
+<h2 id="newsletter">Newsletter<a class="anchor" href="#newsletter" aria-label="Link to Newsletter">#</a></h2>
+<p>An email signup with eyebrow, heading, text, <strong>Small print</strong> (for example a link to your privacy policy) and an optional image beside it. Subscribers are added to your customers with email marketing consent and the tag <em>newsletter</em>. The success or error message shows only under the form that was sent, even when the footer has a signup too. <strong>Button label</strong> is read by screen readers; the button shows an arrow.</p>
         <nav class="pager" aria-label="More pages"><a class="pager__link pager__link--prev" href="/salvia/header-and-footer/" rel="prev"><span>Previous</span>Header and footer</a><a class="pager__link pager__link--next" href="/salvia/blog-and-pages/" rel="next"><span>Next</span>Blog and pages</a></nav>
       </main>
 
-      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#settings-every-section-shares">Settings every section shares</a></li><li class="toc__item toc__item--h2"><a href="#home-page-sections">Home page sections</a></li><li class="toc__item toc__item--h2"><a href="#content-sections">Content sections</a></li><li class="toc__item toc__item--h2"><a href="#routine-sections">Routine sections</a></li></ul></aside>
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#settings-every-section-shares">Settings every section shares</a></li><li class="toc__item toc__item--h2"><a href="#home-page-sections">Home page sections</a></li><li class="toc__item toc__item--h2"><a href="#content-sections">Content sections</a></li><li class="toc__item toc__item--h2"><a href="#routine-sections">Routine sections</a></li><li class="toc__item toc__item--h2"><a href="#video">Video</a></li><li class="toc__item toc__item--h2"><a href="#scrolling-text">Scrolling text</a></li><li class="toc__item toc__item--h2"><a href="#logo-list">Logo list</a></li><li class="toc__item toc__item--h2"><a href="#newsletter">Newsletter</a></li></ul></aside>
     </div>
 
     <footer class="site-footer">

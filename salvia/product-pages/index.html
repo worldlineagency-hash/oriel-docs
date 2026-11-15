@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/salvia/styles.css?v=fe2c95fa">
-    <script src="/salvia/app.js?v=fe2c95fa" defer></script>
+    <link rel="stylesheet" href="/salvia/styles.css?v=9398ffab">
+    <script src="/salvia/app.js?v=9398ffab" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -62,7 +62,7 @@
 <p class="lead">The <strong>Product information</strong> section is built from blocks. Drag them to change the order, or hide one with the eye icon.</p>
 
 <h2 id="media-gallery">Media gallery<a class="anchor" href="#media-gallery" aria-label="Link to Media gallery">#</a></h2>
-<p>Images, videos (uploaded or YouTube/Vimeo) and 3D models from the product's media. The first image is the main image on cards; a square, plain-background image works best. When a variant has its own image, choosing the variant shows it. Thumbnails show a play icon on videos; a video plays when its slide is shown and pauses when the customer moves on.</p>
+<p>Images, videos (uploaded or YouTube/Vimeo) and 3D models from the product's media. The first image is the main image on cards; a square, plain-background image works best. When a variant has its own image, choosing the variant shows it. Thumbnails show a play icon on videos; a video plays when its slide is shown and pauses when the customer moves on. On desktop the thumbnails sit in a column beside the main image, with up and down buttons when there are more than fit.</p>
 
 <h2 id="blocks">Blocks<a class="anchor" href="#blocks" aria-label="Link to Blocks">#</a></h2>
 <div class="table-wrap"><table>
@@ -71,10 +71,11 @@
     <tr><td>Title</td><td>The product title, with the subtitle from the product's <em>Subtitle</em> field when <strong>Show subtitle</strong> is on.</td></tr>
     <tr><td>Rating</td><td>Stars from a reviews app that fills Shopify's standard rating fields. Hidden when there are no ratings.</td></tr>
     <tr><td>Price</td><td>Price, sale price, unit price and tax note, plus Shop Pay Installments when available.</td></tr>
-    <tr><td>Variant picker</td><td><strong>Pills</strong> or <strong>Dropdown</strong>. <strong>Show swatches</strong> uses the colors and images from Shopify's swatch settings. Sold-out combinations are marked.</td></tr>
-    <tr><td>Purchase options</td><td>One-time purchase and subscription plans from your subscription app (selling plans), with the saving shown. Products that can only be bought as a subscription start with the first plan selected.</td></tr>
+    <tr><td>Variant picker</td><td><strong>Picker type</strong>: <strong>Pills</strong> or <strong>Dropdown</strong>. <strong>Show swatches</strong> uses the colors and images from Shopify's swatch settings. Sold-out combinations are marked.</td></tr>
+    <tr><td>Purchase options</td><td>One-time purchase and subscription plans from your subscription app (selling plans), with the saving shown. <strong>Note under each plan</strong> adds a short line under the plans. Products that can only be bought as a subscription start with the first plan selected.</td></tr>
     <tr><td>Supply</td><td>How long one pack lasts and the price per day, from <strong>Units per day</strong> and the number of units in the variant (or <strong>Servings per package</strong>).</td></tr>
-    <tr><td>Buy buttons</td><td>Quantity, add to cart and dynamic checkout buttons. For gift cards, an optional recipient form.</td></tr>
+    <tr><td>Buy buttons</td><td>Add to cart, with <strong>Show quantity selector</strong> and <strong>Show dynamic checkout buttons</strong>. For gift cards, <strong>Show recipient form for gift cards</strong> lets customers send the card to someone else.</td></tr>
+    <tr><td>Low stock</td><td>"Only N left" when the selected variant's stock is at or below <strong>Show when stock is at or below</strong>. It updates when the variant changes, and is hidden for products whose inventory isn't tracked or that keep selling when out of stock.</td></tr>
     <tr><td>Pickup availability</td><td>Local pickup status for the selected variant, from <span class="path">Settings &gt; Locations</span>.</td></tr>
     <tr><td>Complementary products</td><td>A short list of products that go well together, chosen in the block, with quick add buttons. The product itself is left out.</td></tr>
     <tr><td>Collapsible row</td><td>A heading and content: your own text, the product description or a page's content.</td></tr>
@@ -83,22 +84,46 @@
   </tbody>
 </table></div>
 
+<h2 id="section-settings">Section settings<a class="anchor" href="#section-settings" aria-label="Link to Section settings">#</a></h2>
+<p><strong>Show breadcrumbs</strong> shows the path above the product, and <strong>Show sticky add to cart</strong> turns on the bar below.</p>
+
 <h2 id="sticky-add-to-cart">Sticky add to cart<a class="anchor" href="#sticky-add-to-cart" aria-label="Link to Sticky add to cart">#</a></h2>
 <p><strong>Show sticky add to cart</strong> shows a bar with the product, variant and add to cart button once the main button scrolls out of view.</p>
 
 <h2 id="sections-below-the-product">Sections below the product<a class="anchor" href="#sections-below-the-product" aria-label="Link to Sections below the product">#</a></h2>
 <ul>
   <li><strong>Related products</strong>: Shopify's automatic recommendations.</li>
+  <li><strong>Product comparison</strong>: see below.</li>
   <li><strong>Complementary products</strong> section: products Shopify suggests as complements, set up in the Search &amp; Discovery app.</li>
   <li><strong>Nutrition table</strong>, <strong>Ingredient spotlight</strong>, <strong>Image comparison</strong>, <strong>FAQ</strong>, <strong>Image with text overlay</strong>: see <a href="/salvia/product-content/">Product content</a>.</li>
 </ul>
+
+<h2 id="product-comparison">Product comparison<a class="anchor" href="#product-comparison" aria-label="Link to Product comparison">#</a></h2>
+<p>A table that compares up to four products, for example the formats of one supplement or products for different moments of the day.</p>
+<ul>
+  <li><strong>Products</strong>: choose up to four. With none chosen, a product page shows products from the product's first collection.</li>
+  <li><strong>On product pages, show the current product first</strong>: the product being viewed is the highlighted first column, marked "Viewing now".</li>
+  <li><strong>Show add to cart buttons</strong>: products with one variant get an <strong>Add</strong> button; products with options or subscriptions link to their page.</li>
+  <li>One <strong>Row</strong> block per line of the table. <strong>Heading</strong> is the row's name and <strong>Shows</strong> what's in it:</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th scope="col">Shows</th><th scope="col">What appears in the cell</th></tr></thead>
+  <tbody>
+    <tr><td>Price</td><td>The price, with the compare-at price when a product with one variant is on sale, and "From" when variants have different prices.</td></tr>
+    <tr><td>Availability</td><td>In stock or Sold out.</td></tr>
+    <tr><td>Product type, Vendor</td><td>The product's type or vendor from Shopify admin.</td></tr>
+    <tr><td>First matching tag</td><td>The first of the row's <strong>Tags</strong> that the product has, for example <em>capsules, softgels, drops</em> shows the product's format.</td></tr>
+    <tr><td>Yes / no for a tag</td><td>A check mark when the product has the row's first tag (for example <em>vegan</em>), a dash when it doesn't.</td></tr>
+  </tbody>
+</table></div>
+<p><strong>Text when nothing matches</strong> replaces the dash, for example <em>Any time</em>. Tags are matched without regard to capital letters. On phones the table scrolls sideways with the row names kept in view. The section is hidden on gift cards and when there's only one product to show.</p>
 
 <h2 id="product-templates">Product templates<a class="anchor" href="#product-templates" aria-label="Link to Product templates">#</a></h2>
 <p>Salvia includes three product templates: <strong>Default</strong>, <strong>featured</strong> (with nutrition table and ingredient spotlight) and <strong>powder</strong> (with a how-to-mix comparison). Choose a product's template in Shopify admin on the product page, under <strong>Theme template</strong>.</p>
         <nav class="pager" aria-label="More pages"><a class="pager__link pager__link--prev" href="/salvia/blog-and-pages/" rel="prev"><span>Previous</span>Blog and pages</a><a class="pager__link pager__link--next" href="/salvia/product-content/" rel="next"><span>Next</span>Product content</a></nav>
       </main>
 
-      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#media-gallery">Media gallery</a></li><li class="toc__item toc__item--h2"><a href="#blocks">Blocks</a></li><li class="toc__item toc__item--h2"><a href="#sticky-add-to-cart">Sticky add to cart</a></li><li class="toc__item toc__item--h2"><a href="#sections-below-the-product">Sections below the product</a></li><li class="toc__item toc__item--h2"><a href="#product-templates">Product templates</a></li></ul></aside>
+      <aside class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>On this page</p><ul><li class="toc__item toc__item--h2"><a href="#media-gallery">Media gallery</a></li><li class="toc__item toc__item--h2"><a href="#blocks">Blocks</a></li><li class="toc__item toc__item--h2"><a href="#section-settings">Section settings</a></li><li class="toc__item toc__item--h2"><a href="#sticky-add-to-cart">Sticky add to cart</a></li><li class="toc__item toc__item--h2"><a href="#sections-below-the-product">Sections below the product</a></li><li class="toc__item toc__item--h2"><a href="#product-comparison">Product comparison</a></li><li class="toc__item toc__item--h2"><a href="#product-templates">Product templates</a></li></ul></aside>
     </div>
 
     <footer class="site-footer">

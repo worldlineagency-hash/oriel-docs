@@ -917,3 +917,9 @@ td:first-child {
     transition: none;
   }
 }
+
+/* Screenshots */
+.shot { margin: 1.75rem 0; }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--border, rgb(0 0 0 / 0.12)); border-radius: 12px; }
+.shot--phone img { max-width: 360px; margin-inline: auto; }
+.shot figcaption { margin-top: 0.6rem; font-size: 0.875rem; opacity: 0.75; text-align: center; }
